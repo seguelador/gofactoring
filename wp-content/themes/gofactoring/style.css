@@ -476,7 +476,7 @@ a:focus {
 	background-position: center;
 }
 .bg-img-5 {
-	background: url(../images/section/about.jpg);
+	background: url(images/section/about.jpg);
 	background-size: cover;
 	background-position: center;
 }.bg-img-6 {
@@ -954,7 +954,7 @@ blockquote footer:before {
 	text-align:center;
 }
 .footer-background {
-	background: url(../images/footer-vactor.png);
+	background: url(images/footer-vactor.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }

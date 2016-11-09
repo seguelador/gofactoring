@@ -13,9 +13,6 @@
 	<?php wp_head(); ?>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic%7COpen+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/responsive.css">
-	
 	<!-- Favicon -->
 	<!--<link rel="icon" href="images/favicon.ico">-->
 
