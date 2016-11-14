@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html dir="<?php bloginfo('text_direction') ?>" lang="<?php bloginfo('language') ?>">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="<?php bloginfo('charset') ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Go Factoring</title>
-
-	<link rel="stylesheet" href="https://use.fontawesome.com/ea786a6c52.css">
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<?php wp_head(); ?>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic%7COpen+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
 
 	<!-- Favicon -->
-	<!--<link rel="icon" href="images/favicon.ico">-->
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.min.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+	<link rel="icon" href="<?php bloginfo('template_url') ?>/images/favicon.ico">
 
 </head>
 <body>
@@ -64,16 +52,16 @@
 							<span class="icon-bar"></span>
 						</button>
 
-						<a class="navbar-brand" href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.jpg" alt="Logo Go Factoring"></a>
+						<a class="navbar-brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_url') ?>/images/logo.jpg" alt="Logo Go Factoring"></a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="my-navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="empresa.html">NUESTRA EMPRESA</a></li>
-							<li><a href="productos.html">PRODUCTOS Y SERVICIOS</a></li>
-							<li><a href="beneficios.html">BENEFICIOS</a></li>
-							<li><a href="requerimientos.html">REQUERIMIENTOS</a></li>
-							<li><a href="contacto.html">CONTACTO</a></li>			
+							<li><a href="<?php bloginfo('url') ?>/empresa/">NUESTRA EMPRESA</a></li>
+							<li><a href="<?php bloginfo('url') ?>/productos_servicios/">PRODUCTOS Y SERVICIOS</a></li>
+							<li><a href="<?php bloginfo('url') ?>/beneficios/">BENEFICIOS</a></li>
+							<li><a href="<?php bloginfo('url') ?>/requerimientos/">REQUERIMIENTOS</a></li>
+							<li><a href="<?php bloginfo('url') ?>/contacto/">CONTACTO</a></li>	
 						</ul>
 
 					</div>

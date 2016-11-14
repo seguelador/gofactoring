@@ -1,5 +1,6 @@
-$(function($){
-	
+/* triggers when page is ready */
+$(document).ready(function (){
+
 	"use strict";     
 
 	/*
@@ -26,8 +27,12 @@ $(function($){
 			$('.scrolltop').stop(true, true).fadeOut();
 		}
 	});
+
 	$(".scroll").on('click',function(){
-		$("html,body").animate({scrollTop:$("body").offset().top},"1000");
+		$("html,body").animate({
+			scrollTop: $("body").offset().top
+		}, 1000);
 		return false
 	});
 
+});
