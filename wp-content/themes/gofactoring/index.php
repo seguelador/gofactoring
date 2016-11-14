@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -7,28 +8,29 @@
 			</ol>
 
 			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/slider/1.jpg" alt="Slider 1">
+				<?php $slider = array(
+						'post_type' => 'slider',
+						'posts_per_page' => -1 //Cambiar si es necesario aumentar o restringir la cantidad de post en el index
+					); 
+
+					$get_slider = new WP_Query( $slider );
+					$box = 0;
+
+					while ( $get_slider->have_posts() ) {
+						$get_slider->the_post();
+						$box++;
+						
+					?>
+						
+				<div class="item <?php echo ($box == 1) ? 'active' : '' ?>">
+					<?php the_post_thumbnail(); ?>
 					<div class="carousel-caption">
-						<h3>Asesorías financieras en el desarrollo de sus negocios</h3>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-					</div>
-				</div>
-				<div class="item">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt="Slider 2">
-					<div class="carousel-caption">
-						<h3>Acceso a una nueva fuente de financiamiento que complementa las líneas de crédito tradicionales</h3>
+						<h3><?php the_title() ?></h3>
 						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
 					</div>
 				</div>
 
-				<div class="item">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/slider/3.jpg" alt="Slider 3">
-					<div class="carousel-caption">
-						<h3>Reduce los tiempos de cobro y riesgo de no pago de las cuentas por cobrar</h3>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-					</div>
-				</div>
+				<?php  } wp_reset_postdata(); ?>
 			</div>
 
 			<!-- Controls -->
@@ -95,4 +97,5 @@
 				</div>
 			</div>
 		</section>
+		
 <?php get_footer(); ?>
